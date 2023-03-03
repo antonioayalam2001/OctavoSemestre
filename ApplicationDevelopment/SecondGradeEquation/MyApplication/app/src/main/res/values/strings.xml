@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Second grade Equations</string>
+    <string name="ingresa_tu_ecuacion_de_segundo_grado">Ingresa tu Ecuacion de Segundo grado</string>
+    <string name="recuerda_la_forma_ax_2_bx_c">Recuerda la forma: ax^2 + bx + c</string>
+    <string name="valor_de_a">Valor de a</string>
+    <string name="valor_de_b">Valor de b</string>
+    <string name="valor_de_c">Valor de c</string>
+    <string name="soluci_n">Solución</string>
+    <string name="soluciones">Soluciones</string>
+</resources>

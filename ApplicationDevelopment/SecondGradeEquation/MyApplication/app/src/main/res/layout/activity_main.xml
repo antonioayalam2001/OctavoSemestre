@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:text="@string/ingresa_tu_ecuacion_de_segundo_grado"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recuerda_la_forma_ax_2_bx_c"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold|italic"
+            android:textAlignment="center" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="66dp" />
+
+    <TextView
+        android:id="@+id/xtVa"
+        android:textAlignment="center"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_de_a" />
+
+    <EditText
+        android:id="@+id/xeTa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+    <TextView
+        android:id="@+id/xtVb"
+        android:textAlignment="center"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_de_b" />
+
+    <EditText
+        android:id="@+id/xeTb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+    <TextView
+        android:id="@+id/xtVc"
+        android:textAlignment="center"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_de_c" />
+
+    <EditText
+        android:id="@+id/xeTc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
+    <Button
+        android:id="@+id/xbtnSol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00BCD4"
+        android:text="@string/soluci_n" />
+
+    <TextView
+            android:id="@+id/xtVr"
+            android:layout_width="match_parent"
+            android:layout_height="247dp"
+            android:text="@string/soluciones"
+            android:fontFamily="monospace"
+            android:textSize="16sp"
+            android:lineSpacingExtra="10sp"
+            android:textStyle="bold"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:capitalize="words"
+            android:background="#C6F1F6" />
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WonderfulNumber</string>
+    <string name="please_enter_your_information">Please enter your information</string>
+    <string name="confirm">Confirm</string>
+    <string name="wonderful_number">Wonderful Number</string>
+    <string name="number">Number:</string>
+    <string name="show_me">Show me</string>
+    <string name="please_enter_the_number">Please introduce numbers</string>
+</resources>
