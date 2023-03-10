@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView jtVr;
     EditText jeTa, jeTb, jeTc;
     Button jbtnRes;
+
+//    Raliza el cambio de pantalla
+    Intent itn;
+//    Bundle permite realizar mandar cosas
+    Bundle bundle;
 
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
@@ -32,10 +38,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick( View v ) {
-        getSolution( );
+        String solution = getSolution( );
+        itn = new Intent( MainActivity.this , ResultActivity.class );
+        bundle = new Bundle(  );
+        bundle.putString( "RESULT" , solution );
+        itn.putExtras( bundle );
+        startActivity( itn );
+
     }
 
-    private void getSolution( ) {
+    private String getSolution( ) {
         jtVr.setText( "" );
 
         jeTa = ( EditText ) findViewById( R.id.xeTa );
@@ -76,11 +88,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if ( potencia > 0 ) {
                     double x1 = ( -b - Math.sqrt( potencia ) ) / ( 2 * a );
                     double x2 = ( -b + Math.sqrt( potencia ) ) / ( 2 * a );
-                    jtVr.setText( "\n Resultados \n  X1:" + decimalFormat.format( x1 ) + "\n" + "X2: " + decimalFormat.format( x2 ) );
+                    return "\n Resultados \n  X1:" + decimalFormat.format( x1 ) + "\n" + "X2: " + decimalFormat.format( x2 );
+//                    jtVr.setText( "\n Resultados \n  X1:" + decimalFormat.format( x1 ) + "\n" + "X2: " + decimalFormat.format( x2 ) );
 
                 } else if ( potencia == 0 ) {
                     double x1 = ( ( -b ) - ( 4 * a * c ) ) / ( 2 * a );
-                    jtVr.setText( "\n Solo hay una solucion ya que la potencia fue 0\n X1 :  " + decimalFormat.format( x1 ) );
+                    return "\n Solo hay una solucion ya que la potencia fue 0\n X1 :  " + decimalFormat.format( x1 );
+//                    jtVr.setText( "\n Solo hay una solucion ya que la potencia fue 0\n X1 :  " + decimalFormat.format( x1 ) );
 
                 } else {
                     //Parte positiva de la raiz
@@ -91,11 +105,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     double x3 = -b / ( 2 * a );
 
                     String sign = x2 > 0 ? " + " : " ";
-                    jtVr.setText(
-                            "\n Resultados \n  X1: " +
-                                    x3 + "  +  " + decimalFormat.format( x1 ) + "i \n" + "X2:   " + x3 + sign + decimalFormat.format( x2 ) + "i" );
+
+                    return "\n Resultados \n  X1: " +
+                            x3 + "  +  " + decimalFormat.format( x1 ) + "i \n" + "X2:   " + x3 + sign + decimalFormat.format( x2 ) + "i";
+//                    jtVr.setText(
+//                            "\n Resultados \n  X1: " +
+//                                    x3 + "  +  " + decimalFormat.format( x1 ) + "i \n" + "X2:   " + x3 + sign + decimalFormat.format( x2 ) + "i" );
                 }
             }
         }
+        return "Error Solution";
     }
 }
