@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SendName</string>
+    <string name="regresar">Regresar</string>
+    <string name="ingresa_tu_nombre">Ingresa tu nombre</string>
+    <string name="name">Name</string>
+    <string name="cambiar">Cambiar</string>
+</resources>
