@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Layouts</string>
+    <string name="magic_square_try_by_yourself">Magic Square. Try by yourself</string>
+    <string name="n_numero_filas_y_columnas">n : Numero filas y columnas</string>
 </resources>
